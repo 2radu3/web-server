@@ -73,6 +73,8 @@ class WSGIServer(object):
         env['PATH_INFO'] = self.path
         env['SERVER_NAME'] = self.server_name
         env['SERVER_PORT'] = str(self.server_port)
+        
+        return env
 
     def start_response(self, status, response_headers, exc_info = None):
         # Necessary server headers
