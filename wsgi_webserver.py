@@ -113,4 +113,4 @@ if __name__ == '__main__':
     application = getattr(module, application)
     httpd = make_server(SERVER_ADDRESS, application)
     print(f'WSGIServer: Serving HTTP on port {PORT}...\n')
-    httpd.server_forever()
+    httpd.serve_forever()
