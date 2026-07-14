@@ -16,9 +16,9 @@ Hello !!
     time.sleep(60) # Block the process for 60 seconds 
 
 def serve_forever():
-    listen_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+    listen_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM) # The server creates a TCP/IP socket
     listen_socket.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
-    listen_socket.bind(SERVER_ADDRESS)
+    listen_socket.bind(SERVER_ADDRESS) # Assigns a local protocl address to the socke
     listen_socket.listen(REQUEST_QUEUE_SIZE)
     print('Serving HTTP in port {port}...'.format(port=PORT))
 
