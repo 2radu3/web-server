@@ -13,7 +13,7 @@ HTTP/1.1 200
 Hello !!
 """
     client_connection.sendall(http_response)
-    time.sleep(60) # Trying to block the process for 60 seconds 
+    time.sleep(60) # Block the process for 60 seconds 
 
 def serve_forever():
     listen_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
