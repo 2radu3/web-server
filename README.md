@@ -1,8 +1,6 @@
 # Python Web Server
 * The goal of this project is to demystify the magic behind web backends by stripping away complex third-party wrappers and dealing directly with low-level network sockets, protocol specifications, and process management.
 * The system operates as a classic structural pipeline connecting a web client all the way through to a modern web application framework:
-    
----
 
 ## Architecture Pipeline
 
@@ -21,7 +19,6 @@
             ▼                 ▼
        [WSGI App]        [WSGI App]     (Flask / Django / Pyramid)
 
----
 ##  Requirements & Installation
 
 * **Operating System**: Linux, macOS, or WSL (Windows Subsystem for Linux). *Note: The multi-processing layer uses UNIX system calls (`fork`) which are natively unsupported on Windows cmd/PowerShell.*
@@ -42,7 +39,6 @@
     pip install Pyramid
     ```
 
----
 
 ## How to Run & Test
 
