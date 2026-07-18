@@ -8,10 +8,17 @@ SERVER_ADDRESS = (HOST, PORT) = '', 8888
 REQUEST_QUEUE_SIZE = 5
 
 def zombies(signum, frame):
-    pid, status = os.wait()
-    print('Child {pid} terminated with status {status}'
-          '\n'.format(pid = pid, status = status))
-
+    while True:
+        try:
+            pid, status = os.waitpid(
+                -1,         # Wait for any child process 
+                os.WNOHANG  # Do not block and return EWOULDBLOCK error 
+            )
+        except OSError:
+            return 
+        
+        if pid == 0:
+            return 
 
 def handle_request(client_connection):
     request = client_connection.recv(1024)
