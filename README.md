@@ -1,10 +1,7 @@
 # Python Web Server
----
-    The goal of this project is to demystify the magic behind web backends by stripping away complex third-party wrappers and dealing directly with low-level network sockets, protocol specifications, and process management.
-    The system operates as a classic structural pipeline connecting a web client all the way through to a modern web application framework:
+* The goal of this project is to demystify the magic behind web backends by stripping away complex third-party wrappers and dealing directly with low-level network sockets, protocol specifications, and process management.
+* The system operates as a classic structural pipeline connecting a web client all the way through to a modern web application framework:
     
----
-
 ---
 
 ## Architecture Pipeline
